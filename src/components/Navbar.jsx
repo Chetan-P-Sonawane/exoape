@@ -1,11 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { IoMenuOutline } from "react-icons/io5";
+import { Power4 } from "gsap/all";
 
 const Navbar = () => {
   return (
     <div className="w-full fixed z-[999]">
       <div className=" max-w-screen-2xl py-7 px-7 sm:py-12 sm:px-14 mx-auto flex justify-between text-white">
-        <div className="logo">
+        <motion.div 
+          initial={{opacity: 0}}
+          whileInView={{opacity: 1}}
+          transition={{ease:[ Power4.easeInOut], duration: 0.8}}
+          className="logo">
           <svg
             viewBox="0 0 95 25"
             fill="none"
@@ -44,22 +50,30 @@ const Navbar = () => {
               data-v-1932cced=""
             ></path>
           </svg>
-        </div>
+        </motion.div>
 
-        <span className="sm:hidden">
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: [Power4.easeInOut], duration: 0.8 }}
+         className="sm:hidden text-xl">
           <IoMenuOutline />
-        </span>
+        </motion.span>
 
-        <div className="links hidden sm:flex gap-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: [Power4.easeInOut], duration: 0.8 }}
+         className="links hidden sm:flex gap-10">
           {["Work", "Studio", "News", "Contact"].map((item, index) => (
             <a
               key={index}
-              className=" text-sm font-regular sm:text-base font-['TWK Lausanne']"
+              className="relative after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer after:bg-white text-sm font-regular sm:text-base"
             >
               {item}
             </a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
