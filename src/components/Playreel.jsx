@@ -1,9 +1,46 @@
-import React from 'react'
+import gsap, { ScrollTrigger, Power4 } from 'gsap/all'
+import React, { useEffect, useRef } from 'react'
 
 const Playreel = () => {
+
+  const parent = useRef(null)
+  const videodiv = useRef(null)
+  const play = useRef(null)
+  const reel = useRef(null)
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: parent.current,
+        top: "0 0",
+        pin: true,
+        // markers: true,
+        scrub: 1
+      },
+    })
+
+    tl
+    .to(videodiv.current, {
+      scale:"5.1",
+      ease: Power4.easeInOut,
+    },'c')
+
+    .to(play.current,{
+      x:"50%",
+      ease: Power4.easeInOut,
+    },'c')
+    
+    .to(reel.current, {
+      x: "-50%",
+      ease: Power4.easeInOut,
+    }, 'c')
+  })
+
   return (
-    <div className="playreel w-full h-screen overflow-hidden relative bg-zinc-900 text-white">
-       <div className="w-32 sm:w-72 aspect-auto absolute top-[42%] sm:top-[37%] left-1/2 -translate-x-1/2 -translate-y-1/2y">
+    <div ref={parent} className="playreel w-full h-screen overflow-hidden relative bg-zinc-900 text-white">
+       <div ref={videodiv} className="w-32 sm:w-72 aspect-auto absolute top-[48%] sm:top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2">
         <video className='rounded' autoPlay muted loop src="https://player.vimeo.com/progressive_redirect/playback/914803778/rendition/1080p/file.mp4?loc=external&log_user=0&signature=5344c0e4fea63ca54bb433621ca0be7b9470b475583fa68b26de2b6e380a390a"></video>
        </div>
 
@@ -13,8 +50,8 @@ const Playreel = () => {
                   <h3 className="text-[3.4vw] sm:text-[1.2vw]">Work in motion</h3>
         </div>
           <h1 className="z-[1] w-full text-[14vw] sm:text-[10vw] font-semibold sm:font-normal flex justify-center gap-[38vw]">
-            <div>Play</div>
-            <div>Reel</div>
+            <div ref={play}>Play</div>
+            <div ref={reel}>Reel</div>
           </h1>
         <p className="text-[3.8vw] sm:text-[1.2vw] text-center px-[14vw] sm:px-[38vw] ">Our work is best experienced in motion. Don’t forget to put on your headphones.</p>
          
