@@ -1,4 +1,4 @@
-import gsap, { Linear, Power4, ScrollTrigger } from 'gsap/all';
+import gsap, { Power4, ScrollTrigger } from 'gsap/all';
 import React, { useRef, useEffect } from 'react'
 import { motion } from "framer-motion";
 
@@ -81,7 +81,7 @@ const Spread = () => {
                
               {["Spread", "the News"].map((item, index) => (
                   <h1
-                      className="w-full text-[15vw] sm:text-[10vw] font-semibold sm:font-normal leading-[18vw] sm:leading-[10vw] flex flex-col justify-center items-center py-[5vw] sm:py-[2vw] overflow-hidden"
+                      className="w-full text-[15vw] sm:text-[10vw] font-semibold sm:font-normal leading-[14vw] sm:leading-[10vw] flex flex-col justify-center items-center py-[5vw] sm:py-[2vw] overflow-hidden"
                       key={index}
                   >
                       <div>

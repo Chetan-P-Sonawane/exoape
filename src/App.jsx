@@ -6,6 +6,7 @@ import Work from './components/Work'
 import Playreel from './components/Playreel'
 import Spread from './components/Spread'
 import LocomotiveScroll from 'locomotive-scroll';
+import Footer from './components/Footer'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Work />
       <Playreel />
       <Spread />
+      <Footer />
     </div>
   )
 }

@@ -52,9 +52,6 @@ const Landing = () => {
 
               )
               })}
-            {/* <h1 className="text-[15vw] sm:text-[18vw] tracking-tight leading-none"> Digital</h1>
-            <h1 className="text-[15vw] sm:text-[18vw] tracking-tight leading-none">Design</h1>
-            <h1 className="text-[15vw] sm:text-[18vw] tracking-tight leading-none">Experience</h1> */}
           </div>
           <div className="para2 mt-[10vw] sm:mt-[9vw] sm:w-1/2 text-[3.4vw] sm:text-[1.51vw] tracking-[0.5px] font-semibold">
             <p>We help experience-driven companies thrive by making their audience feel the refined intricacies of their brand and product in the digital space. Unforgettable journeys start with a click.</p>
