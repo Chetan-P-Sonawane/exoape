@@ -1,28 +1,36 @@
-
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
-import Landing from './components/Landing'
-import Navbar from './components/Navbar'
-import Work from './components/Work'
-import Playreel from './components/Playreel'
-import Spread from './components/Spread'
+
+import Header from "./components/Header";
+import Home from "./components/Home"
+import Studio from "./components/Studio";
+import News from "./components/News";
+import Contact from './components/Contact';
+
 import LocomotiveScroll from 'locomotive-scroll';
-import Footer from './components/Footer'
 
 function App() {
-
 
   const locomotiveScroll = new LocomotiveScroll();
 
 
   return (
-    <div className="w-full">
-      <Navbar />
-      <Landing />
-      <Work />
-      <Playreel />
-      <Spread />
-      <Footer />
-    </div>
+
+    <>
+    <Router>
+    
+      <Header />
+   
+      <Routes>
+        
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/studio" element={<Studio />} />
+        <Route exact path="/news" element={<News />} />
+        <Route exact path="/contact" element={<Contact />} />
+        
+      </Routes>
+    </Router>
+    </>
   )
 }
 

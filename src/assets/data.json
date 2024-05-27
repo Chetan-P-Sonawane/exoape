@@ -1,0 +1,23 @@
+{
+
+    "navlinks" : [
+
+        {    
+            "name":"Work",
+            "link":"/"
+        },
+        {    
+            "name":"Studio",
+            "link":"/studio"
+        },
+        {    
+            "name":"News",
+            "link":"/news"
+        },
+        {    
+            "name":"Contact",
+            "link":"/contact"
+        }
+    ]
+
+}
