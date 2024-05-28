@@ -20,4 +20,47 @@
         }
     ]
 
+    ,
+
+    "news" : [
+
+        {
+            "title": " Awwwards",
+            "video": "https://a.storyblok.com/f/133769/x/d82bf55cdf/news-revolt.mp4",
+            "img":"",
+            "subtitle":"Revolt — Changing the landscape of merchandising. Holographik x Exo Ape."
+        },
+        {
+            "title": "Communication Arts",
+            "video": "",
+            "img":"https://a.storyblok.com/f/133769/2500x1667/f226aa7186/rino-pelle-collage-4.jpg/m/450x300/filters:quality(90)",
+            "subtitle":"Get an in-depth look at Rino & Pelle in CommArts' Webpicks."
+        },
+        {
+            "title": "Awwwards",
+            "video": "",
+            "img":"https://a.storyblok.com/f/133769/756x756/0c0899568c/news-glossarie.jpg/m/450x450/filters:quality(90)",
+            "subtitle":"Glossarie.xyz wins mobile site of the week at Awwwards!"
+        },
+        {
+            "title": "ExoApe",
+            "video": "https://a.storyblok.com/f/133769/x/8a873d6133/news-unxd-nft-design.mp4",
+            "img": "",
+            "subtitle":"Design for UNXD Digital Luxury & Culture NFT Marketplace"
+        },
+        {
+            "title": "The FWA",
+            "video": "",
+            "img":"https://a.storyblok.com/f/133769/1896x1119/4dc6e8ed05/news-aebele.jpg/m/450x266/filters:quality(90)",
+            "subtitle":"QA article by The FWA team — Read all about our thought process on the Æbele Interiors website."
+        },
+        {
+            "title": "CSSDA",
+            "video": "",
+            "img": "https://a.storyblok.com/f/133769/1500x2122/8ebf9e4b8b/news-exo-ape-cssda-site-of-the-year-ottografie.jpg/m/450x637/filters:quality(90)",
+            "subtitle":"Ottografie won Photography Site of the Year at CSS Design Awards!"
+        }
+
+    ]
+
 }

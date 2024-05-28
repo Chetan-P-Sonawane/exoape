@@ -19,7 +19,7 @@ export default Header
 const NavbarContent = () => {
     return (
         <div className="w-full fixed z-[999]">
-            <div className=" max-w-screen-2xl py-7 px-7 sm:py-12 sm:px-14 mx-auto flex justify-between text-black ">
+            <div className=" max-w-screen-2xl py-7 px-7 sm:py-12 sm:px-14 mx-auto flex justify-between text-zinc-900 ">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -86,7 +86,7 @@ const NavbarContent = () => {
                         <NavLink
                             to={item.link}
                             key={index}
-                            className="relative after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer after:bg-black text-sm font-regular sm:text-base"
+                                className="relative after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer after:bg-zinc-900 text-sm font-regular sm:text-base"
                         >
                             {item.name}
                         </NavLink>
