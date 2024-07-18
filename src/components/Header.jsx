@@ -2,15 +2,22 @@ import React from 'react'
 
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { IoMenuOutline } from "react-icons/io5";
+import { AiOutlineMenu } from "react-icons/ai";
 import { Power4 } from "gsap/all";
 import data from "../assets/data.json";
 
-const Header = () => {
+const Header = ({ menuOpen, setmenuOpen }) => {
   return (
+    <>
     <nav>
-        <NavbarContent />
+        <NavbarContent setmenuOpen={setmenuOpen} />
+         
     </nav>
+          <button onClick={() => setmenuOpen(!menuOpen)} className='navBtn sm:hidden fixed z-[999] right-[7%] top-[2.5%] sm:top-[6%] w-[60px] h-[35px] bg-gray-200 text-[20px] flex items-center justify-center rounded-[50px] '>
+              <AiOutlineMenu className="hamicon  text-black" />
+          </button>
+          
+      </>
   )
 }
 
@@ -18,13 +25,15 @@ export default Header
 
 const NavbarContent = () => {
     return (
-        <div className="w-full fixed z-[999]">
-            <div className=" max-w-screen-2xl py-7 px-7 sm:py-12 sm:px-14 mx-auto flex justify-between text-zinc-900 ">
+        <div className="w-full fixed z-[99]">
+            <div className=" max-w-screen-2xl py-7 px-7 sm:py-12 sm:px-14 mx-auto flex justify-between text-white select-none">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ ease: [Power4.easeInOut], duration: 0.8 }}
-                    className="logo">
+                    className="logo drop-shadow-[1px_0px_0.5px_rgba(0,0,0,1)]"
+                    
+                    >
                     <NavLink to="/">
                     <svg
                         viewBox="0 0 95 25"
@@ -67,14 +76,7 @@ const NavbarContent = () => {
                     </NavLink>
                 </motion.div>
 
-                <motion.span
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ ease: [Power4.easeInOut], duration: 0.8 }}
-                    className="sm:hidden text-xl"
-                >
-                    <IoMenuOutline />
-                </motion.span>
+               
 
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -86,7 +88,7 @@ const NavbarContent = () => {
                         <NavLink
                             to={item.link}
                             key={index}
-                                className="relative after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer after:bg-zinc-900 text-sm font-regular sm:text-base"
+                                className="relative after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer drop-shadow-[1px_0px_0.5px_rgba(0,0,0,1)] after:bg-white text-sm font-regular sm:text-base"
                         >
                             {item.name}
                         </NavLink>
@@ -97,4 +99,36 @@ const NavbarContent = () => {
     );
 };
 
+
+
+export const NavPopup = ({menuOpen,setmenuOpen}) => {
+  return (
+      <div className={`w-full  h-screen fixed z-[100]  ${menuOpen ? 'top-0 duration-[1.5s] ' : 'top-[-140%] duration-[1.5s] '} `}>
+      {/* added this line */}
+          <div className=" py-7 px-7 sm:py-12 sm:px-14 mx-auto flex flex-col justify-center align-middle text-white bg-black select-none">
+             
+
+
+              <div
+                  className=" h-screen links flex flex-col justify-center items-center leading-none gap-2 px-[10vw] ">
+                  {
+                      data.navlinks.map((item, index) => (
+                          <NavLink
+                              to={item.link}
+                              key={index}
+                              className="overflow-hidden relative after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer after:bg-white text-[17vw] sm:text-[5vw] text-gray-200 font-regular "
+                          >
+                           <motion.h3
+                                  initial={{ y: "50%", opacity: 0 }}
+                                  whileInView={{ y: 0, opacity: 1}}
+                                  transition={{ ease: [Power4.easeInOut], duration: 0.8, delay: 1.2-0.225*index }}
+                                  onClick={() => setmenuOpen(false)}
+                              >{item.name}</motion.h3>
+                          </NavLink>
+                      ))}
+              </div>
+          </div>
+      </div>
+  )
+}
 

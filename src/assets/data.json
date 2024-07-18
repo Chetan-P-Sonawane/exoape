@@ -61,6 +61,29 @@
             "subtitle":"Ottografie won Photography Site of the Year at CSS Design Awards!"
         }
 
+    ],
+
+    "carousel" : [
+        {   
+            "title":"Best off Behance: Celebrating 100 Years of Combia Pictures",
+            "video":"",
+            "img":"https://a.storyblok.com/f/133769/2500x1669/f17a650324/pixelflakes-news-hero.jpg/m/2400x1602/filters:quality(90)"
+        },
+        {   
+            "title":"Get a behind the scence look at our work for Pixelflakes",
+            "video":"https://a.storyblok.com/f/133769/x/aaf6399723/exo-ape-news-win-sotm.mp4",
+            "img":""
+        },
+        {    
+            "title":"2 nominations for ExoApe at the Awwwards Annual Awards 2023",
+            "video":"",
+            "img":"https://a.storyblok.com/f/133769/2844x1600/67feeb64de/exo-ape-awwwards-annual-2023.jpg/m/2400x1350/filters:quality(90)"
+        },
+        {    
+            "title":"Descover Exo Ape's Site of the Month win in this insights article",
+            "video":"https://a.storyblok.com/f/133769/x/b5fa4892a8/ali-ali-video-divider.mp4",
+            "img":""
+        }
     ]
 
 }

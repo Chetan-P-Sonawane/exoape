@@ -1,10 +1,10 @@
 import React from 'react'
-import Footer from './Footer'
+import Footer from '../components/Footer'
 import {motion} from "framer-motion"
 
 const Contact = () => {
   return (
-      <div className="w-full relative mx-auto">
+      <div className="w-full relative mx-auto select-none">
           
           <div className='w-full absolute top-72 -z-10 flex overflow-hidden whitespace-nowrap'>
               <motion.h2

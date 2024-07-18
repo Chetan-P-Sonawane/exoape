@@ -1,12 +1,16 @@
 import React from 'react'
 import data from "../assets/data.json";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
+// import SlideAnimation from './SlideAnimation';
+import Carousel from '../components/Carousel';
 
 const News = () => {
   return (
-    <div className='relative w-full h-min-[135vh] sm:h-min-[300vh]'>
+    <div className='relative w-full h-min-[135vh] sm:h-min-[300vh] select-none'>
+        <Carousel />
+        {/* <SlideAnimation /> */}
       <div className='text max-w-screen-xl h-full mx-auto px-7 sm:px-14 text-black'>
-        
+         
         {
           data.news.map((item, index) => (
            <NewsComponent title={item.title} subtitle={item.subtitle}
