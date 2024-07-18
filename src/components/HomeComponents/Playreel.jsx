@@ -53,7 +53,7 @@ const Playreel = () => {
             <div ref={play}>Play</div>
             <div ref={reel}>Reel</div>
           </h1>
-        <p className="text-[3.8vw] sm:text-[1.2vw] text-center px-[14vw] sm:px-[38vw] ">Our work is best experienced in motion. Don’t forget to put on your headphones.</p>
+        <p className="text-[4.6vw] sm:text-[1.2vw] text-center px-[8vw] sm:px-[36vw] ">Our work is best experienced in motion. Don’t forget to put on your headphones.</p>
          
       </div>
     </div>

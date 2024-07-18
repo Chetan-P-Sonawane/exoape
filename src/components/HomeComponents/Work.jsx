@@ -49,7 +49,7 @@ const Work = () => {
               <h4 className="inline-block">Featured Projects</h4>
             </div>
 
-            <h3 className=" text-[4.7vw] sm:text-[1.56vw]  leading-[6.5vw] sm:leading-[2vw] pb-8 pt-10">
+            <h3 className=" text-[4.6vw] sm:text-[1.56vw]  leading-[6.5vw] sm:leading-[2vw] pb-8 pt-10">
               Highlights of cases that we passionately built with
               forward-thinking clients and friends over the years.
             </h3>
