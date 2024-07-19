@@ -17,7 +17,7 @@ const Studio = () => {
             <div className="headings mt-[50vw] sm:mt-[18vw] sm:-ml-[0.9vw]">
               {["Building", "Digital", "Presence"].map((item, index) => {
                 return (
-                  <h1 key={index} className=" overflow-hidden text-[18vw] sm:text-[11vw] py-3 -my-4 sm:py-8 sm:-my-16  tracking-tighter leading-none">
+                  <h1 key={index} className=" overflow-hidden text-[18vw] sm:text-[11vw] py-3 -my-4 sm:py-8 sm:-my-16 tracking-tight sm:tracking-tighter leading-none">
                     <motion.span
                       initial={{ rotate: 30, y: "100%", opacity: 0 }}
                       animate={{ rotate: 0, y: 0, opacity: 1, delay: index * 0.2 }}
@@ -30,7 +30,7 @@ const Studio = () => {
   
                 )
               })}
-              <div className=" mt-[5vw] sm:mt-[4.5vw] sm:ml-[0.9vw] w-2/3 sm:w-full text-[4.6vw] sm:text-[1.2vw] tracking-tight">
+              <div className=" mt-[5vw] sm:mt-[4.5vw] sm:ml-[0.9vw] w-2/3 sm:w-full text-[4.6vw] sm:text-[1.2vw] trading-none sm:tracking-tight">
                 <p>Digital experiences with maximum emotional impact</p>
               </div>
             </div>
