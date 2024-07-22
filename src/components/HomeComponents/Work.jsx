@@ -19,7 +19,7 @@ const Work = () => {
               fill="currentColor"
             ></path>
           </svg>
-          <h4 className="inline-block text-sm">Featured Projects</h4>
+          <h4 className="inline-block text-[4.6vw] sm:text-[1.2vw]">Featured Projects</h4>
         </div>
         <h1 className="text-[16vw] sm:text-[18vw] mt-1  sm:mb-10 font-normal tracking-tight overflow-hidden">
           <motion.span 
@@ -46,7 +46,7 @@ const Work = () => {
                   fill="currentColor"
                 ></path>
               </svg>
-              <h4 className="inline-block">Featured Projects</h4>
+              <h4 className="inline-block text-[4.6vw] sm:text-[1.2vw]">Featured Projects</h4>
             </div>
 
             <h3 className=" text-[4.6vw] sm:text-[1.56vw]  leading-[6.5vw] sm:leading-[2vw] pb-8 pt-10">
