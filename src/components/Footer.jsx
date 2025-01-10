@@ -32,7 +32,7 @@ const Footer = () => {
                  {
                   return(
                     <a 
-                      className="flex opacity-85 my-2 relative after:content-[''] after:absolute after:bottom-[1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer after:bg-orange-200"
+                      className="flex w-fit opacity-85 my-2 relative after:content-[''] after:absolute after:bottom-[1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer after:bg-orange-200"
                        key={index}>{item}</a>
                   )
                   })}
@@ -48,7 +48,7 @@ const Footer = () => {
                 {
                   return (
                     <a
-                      className="flex opacity-85 my-2 relative after:content-[''] after:absolute after:bottom-[1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer after:bg-orange-200"
+                      className="flex w-fit  opacity-85 my-2 relative after:content-[''] after:absolute after:bottom-[1px] after:left-0 after:h-[1px] after:w-[100%] after:scale-x-0 after:origin-left after:duration-300 after:ease-in-out hover:after:scale-x-100 hover:after:duration-300 cursor-pointer after:bg-orange-200"
                       key={index}>{item}</a>
                   )
                 })}
