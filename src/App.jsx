@@ -9,12 +9,13 @@ import Home from "./pages/Home"
 import Studio from "./pages/Studio";
 import News from "./pages/News";
 import Contact from './pages/Contact';
+import LocomotiveScrollComponent from "./components/LocomotiveScrollComponent";
 
-import LocomotiveScroll from 'locomotive-scroll';
+// import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
 
-  const locomotiveScroll = new LocomotiveScroll();
+  // const locomotiveScroll = new LocomotiveScroll();
 
   const [menuOpen,setmenuOpen] = useState(false)
   console.log(menuOpen)
@@ -31,10 +32,9 @@ function App() {
     };
   }, [menuOpen]);
 
-
   return (
 
-    <>
+    <LocomotiveScrollComponent>
     <Router>
        <ScrollToTop />
       <NavPopup menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
@@ -49,7 +49,7 @@ function App() {
         
       </Routes>
     </Router>
-    </>
+    </LocomotiveScrollComponent>
   )
 }
 

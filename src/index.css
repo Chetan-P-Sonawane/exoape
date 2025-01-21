@@ -8,3 +8,8 @@
     scrollbar-width: none;
     scroll-behavior: smooth;
 }
+
+.smooth-scroll {
+    overflow: hidden;
+    position: relative;
+}
